@@ -29,7 +29,7 @@ Steps to bootstrap and create basic development chroots for Ubuntu *Precise*:
 
    ~~~ sh
    $ sudo enter-chroot
-   (precise) $ sudo apt-get -y install git vim gcc make libssl-dev libsqlite3-dev libv8-dev build-essential curl uuid-runtime postgresql libpq-dev tmux
+   (precise) $ sudo apt-get -y install git vim gcc make libssl-dev libsqlite3-dev libv8-dev build-essential curl uuid-runtime postgresql libpq-dev tmux libreadline-dev
    (precise) $ git config --global user.name "YOUR NAME"
    (precise) $ git config --global user.email "YOUR EMAIL"
    ~~~
