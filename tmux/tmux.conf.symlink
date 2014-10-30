@@ -99,3 +99,5 @@ bind Down last-window \; swap-pane -s tmp.0 \; kill-window -t tmp
 bind -r ( switch-client -p
 bind -r ) switch-client -n
 
+# fix OS X user namespace issues
+set -g default-command "reattach-to-user-namespace -l $SHELL"
