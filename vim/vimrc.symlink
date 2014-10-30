@@ -1,4 +1,14 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 syntax on
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+" set a shortcut to toggle pates mode
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
+let loaded_matchparen = 1
+
