@@ -19,3 +19,6 @@
 [submodule "powerline-fonts"]
 	path = powerline-fonts
 	url = git@github.com:leightonshank/powerline-fonts.git
+[submodule "vim.symlink/bundle/vim-gitgutter"]
+	path = vim.symlink/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git

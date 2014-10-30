@@ -1,4 +1,6 @@
 # tmux config file
+# make the status bar a little prettier
+source-file ~/.tmux/tmuxline.airline
 
 # define an easier prefix
 set -g prefix C-a
@@ -43,7 +45,6 @@ setw -g mode-mouse off
 # set tmux to display 256 colors
 set -g default-terminal "screen-256color"
 
-source-file ~/.tmux/tmuxline.airline
 # make the status bar a little prettier
 #set -g status-fg white
 #set -g status-bg black

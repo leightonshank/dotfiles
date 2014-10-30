@@ -8,7 +8,9 @@ filetype indent plugin on
 " set a shortcut to toggle pates mode
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-set showmode
+"set showmode
+set number
 
 let loaded_matchparen = 1
-
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
