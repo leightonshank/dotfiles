@@ -13,6 +13,6 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark reattach-to-user-namespace tmux
+brew install grc coreutils spark reattach-to-user-namespace tmux ctags
 
 exit 0

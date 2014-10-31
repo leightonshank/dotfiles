@@ -6,8 +6,8 @@ syntax on
 filetype indent plugin on
 
 " set a shortcut to toggle pates mode
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
+nnoremap <F5> :set invpaste paste?<CR>
+set pastetoggle=<F5>
 "set showmode
 set number
 
@@ -25,3 +25,5 @@ highlight GitGutterChange ctermfg=darkyellow guifg=darkyellow
 highlight GitGutterDelete ctermfg=darkred guifg=darkred
 highlight GitGutterChangeDelete ctermfg=darkyellow guifg=darkyellow
 
+" Tagbar
+nmap <F6> :TagbarToggle<CR>

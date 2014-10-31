@@ -28,3 +28,21 @@
 [submodule "vim.symlink/bundle/vim-sleuth"]
 	path = vim.symlink/bundle/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
+[submodule "vim.symlink/bundle/ctrlp.vim"]
+	path = vim.symlink/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim.symlink/bundle/tagbar"]
+	path = vim.symlink/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "vim.symlink/bundle/vim-ruby"]
+	path = vim.symlink/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "vim.symlink/bundle/vim-rake"]
+	path = vim.symlink/bundle/vim-rake
+	url = https://github.com/tpope/vim-rake.git
+[submodule "vim.symlink/bundle/vim-projectionist"]
+	path = vim.symlink/bundle/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist.git
+[submodule "vim.symlink/bundle/vim-endwise"]
+	path = vim.symlink/bundle/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
