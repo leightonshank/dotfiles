@@ -74,13 +74,13 @@ directory_name() {
 remote_host() {
   if [[ -n "$SSH_CONNECTION" ]]
   then
-    echo "($(hostname -s)) "
+    echo "%{$fg[blue]%}@$(hostname -s)%{$reset_color%} "
   else
     echo ""
   fi
 }
 
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n$(remote_host)› '
+export PROMPT=$'\n$(remote_host)$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg[cyan]%}%{$reset_color%}"
 }
