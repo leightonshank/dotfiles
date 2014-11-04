@@ -23,10 +23,7 @@ let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
 
 highlight clear SignColumn
-highlight GitGutterAdd ctermfg=darkgreen guifg=darkgreen
-highlight GitGutterChange ctermfg=darkyellow guifg=darkyellow
-highlight GitGutterDelete ctermfg=darkred guifg=darkred
-highlight GitGutterChangeDelete ctermfg=darkyellow guifg=darkyellow
 
 " Tagbar
 nmap <F6> :TagbarToggle<CR>
+
