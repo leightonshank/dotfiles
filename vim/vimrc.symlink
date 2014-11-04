@@ -2,6 +2,9 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 syntax on
 
+set background=dark
+colorscheme solarized
+
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
 

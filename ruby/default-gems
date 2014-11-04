@@ -1,4 +1,5 @@
 bundler
 rails
 tmuxinator
+gem-browse
 gem-ctags
