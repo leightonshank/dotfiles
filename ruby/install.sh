@@ -14,7 +14,9 @@ then
     brew install ruby-build > /tmp/ruby-build-install.log
   fi
 
+  echo " Installing rbenv plugins for you."
   brew install rbenv-ctags rbenv-gem-rehash rbenv-default-gems
+
   if [ -f "./default-gems" -a ! -e "${RBENV_ROOT}/default-gems" ]
   then
     echo "  Setting up default-gems for you."
