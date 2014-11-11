@@ -58,9 +58,19 @@ ruby_version() {
   fi
 }
 
-rb_prompt() {
-  if ! [[ -z "$(ruby_version)" ]]
+python_virtualenv() {
+  if ! [[ -z  $VIRTUAL_ENV ]]
   then
+    basename $VIRTUAL_ENV
+  else
+    echo ""
+  fi
+}
+
+rb_prompt() {
+  if ! [[ -z "$(python_virtualenv)" ]]; then
+    echo "%{$fg_bold[red]%}($(python_virtualenv))%{$reset_color%} "
+  elif ! [[ -z "$(ruby_version)" ]]; then
     echo "%{$fg[yellow]%}$(ruby_version)%{$reset_color%} "
   else
     echo ""
