@@ -58,3 +58,6 @@
 [submodule "vim.symlink/bundle/vim-puppet"]
 	path = vim.symlink/bundle/vim-puppet
 	url = https://github.com/rodjek/vim-puppet.git
+[submodule "vim.symlink/bundle/tabular"]
+	path = vim.symlink/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
