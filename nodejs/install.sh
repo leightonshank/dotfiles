@@ -1,4 +1,3 @@
-
 #!/bin/sh
 #
 # Node Version Manager (NVM)
