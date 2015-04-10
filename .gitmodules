@@ -61,3 +61,6 @@
 [submodule "vim.symlink/bundle/tabular"]
 	path = vim.symlink/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "vim.symlink/bundle/node"]
+	path = vim.symlink/bundle/node
+	url = git@github.com:moll/vim-node.git
