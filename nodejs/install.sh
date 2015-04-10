@@ -8,7 +8,7 @@
 if test ! $(which nvm)
 then
   echo "  Installing NVM for you."
-   curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash > /tmp/homebrew-install.log
+   curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash > /tmp/nvm-install.log
 fi
 
 exit 0
