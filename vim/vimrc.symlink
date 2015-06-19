@@ -28,4 +28,4 @@ let g:gitgutter_eager = 1
 nmap <F6> :TagbarToggle<CR>
 
 " ignore dirs from CtrlP
-let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|public/vendor\|git'
