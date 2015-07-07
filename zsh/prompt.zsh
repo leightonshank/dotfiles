@@ -58,7 +58,14 @@ ruby_version() {
   fi
 }
 
-python_virtualenv() {
+node_version() {
+  if [[ $(type nvm) == 'nvm is a shell function' ]]
+  then
+    echo "$(nvm current)"
+  fi
+}
+
+py_venv() {
   if ! [[ -z  $VIRTUAL_ENV ]]
   then
     basename $VIRTUAL_ENV
@@ -68,13 +75,20 @@ python_virtualenv() {
 }
 
 rb_prompt() {
-  if ! [[ -z "$(python_virtualenv)" ]]; then
-    echo "%{$fg_bold[red]%}($(python_virtualenv))%{$reset_color%} "
-  elif ! [[ -z "$(ruby_version)" ]]; then
-    echo "%{$fg[yellow]%}$(ruby_version)%{$reset_color%} "
-  else
-    echo ""
+  prmt=""
+  if ! [[ -z "$(py_venv)" ]]; then
+    prmt="$prmt%{$fg_bold[red]%}$(py_venv)%{$reset_color%}  // "
   fi
+
+  if ! [[ -z "$(ruby_version)" ]]; then
+    prmt="$prmt%{$fg[yellow]%}$(ruby_version)%{$reset_color%} // "
+  fi
+
+  if ! [[ -z "$(node_version)" ]]; then
+    prmt="$prmt%{$fg[green]%}$(node_version)%{$reset_color%} // "
+  fi
+
+  echo $prmt
 }
 
 directory_name() {
