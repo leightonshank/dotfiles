@@ -64,3 +64,6 @@
 [submodule "vim.symlink/bundle/vim-javascript"]
 	path = vim.symlink/bundle/vim-javascript
 	url = git@github.com:pangloss/vim-javascript.git
+[submodule "vim.symlink/bundle/vim-json"]
+	path = vim.symlink/bundle/vim-json
+	url = git@github.com:elzr/vim-json.git
