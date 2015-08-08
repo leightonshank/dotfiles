@@ -67,3 +67,6 @@
 [submodule "vim.symlink/bundle/vim-less"]
 	path = vim.symlink/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
+[submodule "vim.symlink/bundle/vim-json"]
+	path = vim.symlink/bundle/vim-json
+	url = git@github.com:elzr/vim-json.git
