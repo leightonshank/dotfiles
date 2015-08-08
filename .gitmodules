@@ -64,3 +64,6 @@
 [submodule "vim.symlink/bundle/vim-javascript"]
 	path = vim.symlink/bundle/vim-javascript
 	url = git@github.com:pangloss/vim-javascript.git
+[submodule "vim.symlink/bundle/vim-less"]
+	path = vim.symlink/bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
