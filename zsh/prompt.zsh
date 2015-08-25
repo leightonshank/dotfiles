@@ -77,15 +77,15 @@ py_venv() {
 rb_prompt() {
   prmt=""
   if ! [[ -z "$(py_venv)" ]]; then
-    prmt="$prmt%{$fg_bold[red]%}$(py_venv)%{$reset_color%}  // "
+    prmt="${prmt}[%{$fg_bold[blue]%}$(py_venv)%{$reset_color%}]  "
   fi
 
   if ! [[ -z "$(ruby_version)" ]]; then
-    prmt="$prmt%{$fg[yellow]%}$(ruby_version)%{$reset_color%} // "
+    prmt="${prmt}ruby@%{$fg[yellow]%}$(ruby_version)%{$reset_color%} "
   fi
 
   if ! [[ -z "$(node_version)" ]]; then
-    prmt="$prmt%{$fg[green]%}$(node_version)%{$reset_color%} // "
+    prmt="${prmt}node@%{$fg[yellow]%}$(node_version)%{$reset_color%} "
   fi
 
   echo $prmt
