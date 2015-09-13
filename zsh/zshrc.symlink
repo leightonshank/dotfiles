@@ -38,3 +38,5 @@ do
 done
 
 unset config_files
+
+(( $+commands[hub] )) && eval "$(hub alias -s)"

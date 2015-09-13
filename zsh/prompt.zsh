@@ -77,15 +77,15 @@ py_venv() {
 rb_prompt() {
   prmt=""
   if ! [[ -z "$(py_venv)" ]]; then
-    prmt="$prmt%{$fg_bold[red]%}$(py_venv)%{$reset_color%}  // "
+    prmt="${prmt}[%{$fg_bold[blue]%}$(py_venv)%{$reset_color%}]  "
   fi
 
   if ! [[ -z "$(ruby_version)" ]]; then
-    prmt="$prmt%{$fg[yellow]%}$(ruby_version)%{$reset_color%} // "
+    prmt="${prmt}ruby@%{$fg[yellow]%}$(ruby_version)%{$reset_color%} "
   fi
 
   if ! [[ -z "$(node_version)" ]]; then
-    prmt="$prmt%{$fg[green]%}$(node_version)%{$reset_color%} // "
+    prmt="${prmt}node@%{$fg[yellow]%}$(node_version)%{$reset_color%} "
   fi
 
   echo $prmt
@@ -104,12 +104,26 @@ remote_host() {
   fi
 }
 
-export PROMPT=$'\n$(remote_host)$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
+  last_command_status=$?
+
+  PROMPT=$'\n$(remote_host)$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n'
+
+  if [[ $last_command_status == 0  ]]
+  then
+    PROMPT+='%{$fg[green]%}✓%{$reset_color%}'
+  else
+    PROMPT+='%{$fg[red]%}✗%{$reset_color%}'
+  fi
+
+  PROMPT+='› '
+
+  export PROMPT
   export RPROMPT="%{$fg[cyan]%}%{$reset_color%}"
+  
 }
 
 precmd() {
-  title "zsh" "%m" "%55<...<%~"
   set_prompt
+  title "zsh" "%m" "%55<...<%~"
 }
